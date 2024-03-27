@@ -11,9 +11,9 @@ export function regUserHandler(ctx, startPayload) {
   ctx.replyWithHTML("Сообщение об успехе");
   sendUserId(ctx.from.id, sessionIdMatch[0])
     .then((res) => {
-      console.log(res);
+      ctx.replyWithHTML("Сообщение об успехе");
     })
     .catch((err) => {
-      console.log(err);
+      ctx.replyWithHTML("При отправке запроса произошла ошибка");
     });
 }
