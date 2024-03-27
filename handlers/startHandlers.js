@@ -3,7 +3,6 @@ import { sendUserId } from "../api/get.js";
 
 export function regUserHandler(ctx, startPayload) {
   const sessionIdMatch = startPayload.match(uuidRegex);
-  console.log(sessionIdMatch[0]);
 
   if (!sessionIdMatch) {
     return;
